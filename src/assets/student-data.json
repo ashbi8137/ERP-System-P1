@@ -1,0 +1,624 @@
+{
+  "adviseedetails": [
+    {
+      "id": { "type": "student", "uuid": "uuid-student-001" },
+      "name": "John",
+      "latestCurriculumID": { "type": "B.Tech in CSE", "uuid": "uuid-curr-2023" },
+      "pastCurriculumIDs": [
+        { "type": "curriculum", "uuid": "uuid-curr-2022" },
+        { "type": "curriculum", "uuid": "uuid-curr-2021" }
+      ],
+      "latestRollNo": "112301046",
+      "pastRollNos": ["122301032", "102301040"],
+      "studentSemTranscriptIDs": [
+        { "type": "transcript", "uuid": "uuid-transcript-1" },
+        { "type": "transcript", "uuid": "uuid-transcript-2" }
+      ],
+      "acceptedSemesterPlans": [
+        {
+          "id": { "type": "semesterPlan", "uuid": "uuid-plan-011" },
+          "studentID": { "type": "student", "uuid": "uuid-student-001" },
+          "status": "WAITFORAPPROVAL",
+          "submitDate": { "day": 10, "month": 1, "year": 2025 },
+          "catCreditPlans": [
+            {
+              "catShortCode": "ELECTIVE",
+              "definedCourses": [{ "type": "course", "uuid": "uuid-course-OOPS" }],
+              "otherCourses": [{ "type": "course", "uuid": "uuid-course-DBMS" },{ "type": "course", "uuid": "uuid-course-ML" },{ "type": "course", "uuid": "uuid-course-MATH" }]
+            }
+          ],
+          "safePlan": false,
+          "remark": {
+            "who": "",
+            "what": "",
+            "date": {}
+          }
+        }
+      ],
+      "cgpa": 9.21,
+      "reason": "Backlogs"
+    },
+    {
+      "id": { "type": "student", "uuid": "uuid-student-002" },
+      "name": "Alice",
+      "latestCurriculumID": { "type": "B.Tech in ECE", "uuid": "uuid-curr-2022" },
+      "pastCurriculumIDs": [{ "type": "curriculum", "uuid": "uuid-curr-2021" }],
+      "latestRollNo": "112301047",
+      "pastRollNos": ["122301033"],
+      "studentSemTranscriptIDs": [
+        { "type": "transcript", "uuid": "uuid-transcript-3" }
+      ],
+      "acceptedSemesterPlans": [
+        {
+          "id": { "type": "semesterPlan", "uuid": "uuid-plan-002" },
+          "studentID": { "type": "student", "uuid": "uuid-student-002" },
+          "status": "WAITFORAPPROVAL",
+          "submitDate": { "day": 10, "month": 4, "year": 2025 },
+          "catCreditPlans": [
+            {
+              "catShortCode": "ELECTIVE",
+              "definedCourses": [{ "type": "course", "uuid": "uuid-course-OOPS" }],
+              "otherCourses": [{ "type": "course", "uuid": "uuid-course-DBMS" },{ "type": "course", "uuid": "uuid-course-ML" }]
+            }
+          ],
+          "safePlan": false,
+          "remark": {
+            "who": "",
+            "what": "",
+            "date": { }
+          }
+        }
+      ],
+      "cgpa": 8.75,
+      "reason": "Attendance"
+    },
+    {
+      "id": { "type": "student", "uuid": "uuid-student-003" },
+      "name": "Bob",
+      "latestCurriculumID": { "type": "B.Tech in IT", "uuid": "uuid-curr-2023" },
+      "pastCurriculumIDs": [
+        { "type": "curriculum", "uuid": "uuid-curr-2022" }
+      ],
+      "latestRollNo": "112301048",
+      "pastRollNos": ["122301034"],
+      "studentSemTranscriptIDs": [{ "type": "transcript", "uuid": "uuid-transcript-4" }],
+      "acceptedSemesterPlans": [
+        {
+          "id": { "type": "semesterPlan", "uuid": "uuid-plan-003" },
+          "studentID": { "type": "student", "uuid": "uuid-student-003" },
+          "status": "WAITFORAPPROVAL",
+          "submitDate": { "day": 1, "month": 3, "year": 2025 },
+          "catCreditPlans": [
+            {
+              "catShortCode": "LAB",
+              "definedCourses": [{ "type": "course", "uuid": "uuid-course-ML" }],
+              "otherCourses": [{ "type": "course", "uuid": "uuid-course-OS" },{ "type": "course", "uuid": "uuid-course-MATH" }]
+            }
+          ],
+          "safePlan": false,
+          "remark": {
+            "who": "",
+            "what": "",
+            "date": {}
+          }
+        }
+      ],
+      "cgpa": 9.55,
+      "reason": "Low CGPA"
+    },
+    {
+      "id": { "type": "student", "uuid": "uuid-student-004" },
+      "name": "Charlie",
+      "latestCurriculumID": { "type": "B.Tech in CSE", "uuid": "uuid-curr-2023" },
+      "pastCurriculumIDs": [
+        { "type": "curriculum", "uuid": "uuid-curr-2022" },
+        { "type": "curriculum", "uuid": "uuid-curr-2021" }
+      ],
+      "latestRollNo": "112301049",
+      "pastRollNos": ["122301035", "102301041"],
+      "studentSemTranscriptIDs": [{ "type": "transcript", "uuid": "uuid-transcript-5" },{ "type": "transcript", "uuid": "uuid-transcript-6" }],
+      "acceptedSemesterPlans": [
+        {
+          "id": { "type": "semesterPlan", "uuid": "uuid-plan-004" },
+          "studentID": { "type": "student", "uuid": "uuid-student-004" },
+          "status": "ACCEPTED",
+          "submitDate": { "day": 20, "month": 3, "year": 2025 },
+          "catCreditPlans": [
+            {
+              "catShortCode": "CORE",
+              "definedCourses": [{ "type": "course", "uuid": "uuid-course-ML" }],
+              "otherCourses": [{ "type": "course", "uuid": "uuid-course-OS" },{ "type": "course", "uuid": "uuid-course-MATH" }]
+            }
+          ],
+          "safePlan": true,
+          "remark": {
+            "who": "",
+            "what": "",
+            "date": {}
+          }
+        }
+      ],
+      "cgpa": 7.9
+    },
+    {
+      "id": { "type": "student", "uuid": "uuid-student-005" },
+      "name": "Dana",
+      "latestCurriculumID": { "type": "B.Tech in EE", "uuid": "uuid-curr-2024" },
+      "pastCurriculumIDs": [
+        { "type": "curriculum", "uuid": "uuid-curr-2023" },
+        { "type": "curriculum", "uuid": "uuid-curr-2022" }
+      ],
+      "latestRollNo": "112301050",
+      "pastRollNos": ["122301036", "102301042"],
+      "studentSemTranscriptIDs": [{ "type": "transcript", "uuid": "uuid-transcript-7" },{ "type": "transcript", "uuid": "uuid-transcript-8" }],
+      "acceptedSemesterPlans": [
+        {
+          "id": { "type": "semesterPlan", "uuid": "uuid-plan-015" },
+          "studentID": { "type": "student", "uuid": "uuid-student-005" },
+          "status": "ACCEPTED",
+          "submitDate": { "day": 1, "month": 8, "year": 2025 },
+          "catCreditPlans": [
+            {
+              "catShortCode": "ELECTIVE",
+              "definedCourses": [{ "type": "course", "uuid": "uuid-course-ML" }],
+              "otherCourses": [{"type": "course", "uuid": "uuid-course-TOC"},{ "type": "course", "uuid": "uuid-course-SCI" }]
+            }
+          ],
+          "safePlan": true,
+          "remark": {
+            "who": "",
+            "what": "",
+            "date": {}
+          }
+        }
+      ],
+      "cgpa": 8.1
+    }
+],
+
+  "offeredcourses": [
+    {
+      "courseID": { "type": "course", "uuid": "uuid-course-DSA" },
+      "courseView": {
+        "id": { "type": "courseview", "uuid": "uuid-course-DSA" },
+        "info": {
+          "courseCode": { "code": "CS201" },
+          "title": "Data Structures and Algorithms",
+          "ownerDeptShortCodes": ["CSE"],
+          "courseType": "Core",
+          "lhoursPerWeek": 3,
+          "thoursPerWeek": 1,
+          "phoursPerWeek": 2,
+          "credits": 4,
+          "overview": "Covers essential data structures and algorithms.",
+          "requisite": {
+            "preReq": [],
+            "coReq": [],
+            "similar": []
+          }
+        },
+        "pseudoCourse": false
+      },
+      "classSlotNames": ["A1", "L1"],
+      "examSlotName": "E1",
+      "seatForDept": 60,
+      "currentAllotmentForDept": 40,
+      "seatForOthers": 20,
+      "currentAllotmentForOthers": 10,
+      "offeringDeptShortCode": "CSE",
+      "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Jayadev", "uuid": "uuid-inst-001" },
+      "otherInstructorIDs": [],
+      "allocationScheme": {
+        "id": { "type": "allocscheme", "uuid": "uuid-scheme-001" },
+        "code": "DEFAULT",
+        "label": "Default Allocation",
+        "description": "Standard allocation scheme"
+      },
+      "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-001" },
+      "offeringStatus": "OFFERED"
+    },
+    {
+      "courseID": { "type": "course", "uuid": "uuid-course-DBMS" },
+      "courseView": {
+        "id": { "type": "courseview", "uuid": "uuid-course-DBMS" },
+        "info": {
+          "courseCode": { "code": "CS301" },
+          "title": "Database Systems",
+          "ownerDeptShortCodes": ["CSE"],
+          "courseType": "Core",
+          "lhoursPerWeek": 3,
+          "thoursPerWeek": 1,
+          "phoursPerWeek": 2,
+          "credits": 4,
+          "overview": "Concepts of database design, SQL, normalization.",
+          "requisite": {
+            "preReq": [],
+            "coReq": [],
+            "similar": []
+          }
+        },
+        "pseudoCourse": false
+      },
+      "classSlotNames": ["B1", "L2"],
+      "examSlotName": "E2",
+      "seatForDept": 50,
+      "currentAllotmentForDept": 35,
+      "seatForOthers": 15,
+      "currentAllotmentForOthers": 10,
+      "offeringDeptShortCode": "CSE",
+      "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Binsu", "uuid": "uuid-inst-002" },
+      "otherInstructorIDs": [],
+      "allocationScheme": {
+        "id": { "type": "allocscheme", "uuid": "uuid-scheme-001" },
+        "code": "DEFAULT",
+        "label": "Default Allocation",
+        "description": "Standard allocation scheme"
+      },
+      "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-002" },
+      "offeringStatus": "OFFERED"
+    },
+    {
+      "courseID": { "type": "course", "uuid": "uuid-course-OOPS" },
+      "courseView": {
+        "id": { "type": "courseview", "uuid": "uuid-course-OOPS" },
+        "info": {
+          "courseCode": { "code": "CS303" },
+          "title": "Object Oriented Programming",
+          "ownerDeptShortCodes": ["CSE"],
+          "courseType": "Core",
+          "lhoursPerWeek": 3,
+          "thoursPerWeek": 1,
+          "phoursPerWeek": 2,
+          "credits": 4,
+          "overview": "OOP principles using C++ and Java.",
+          "requisite": {
+            "preReq": [],
+            "coReq": [],
+            "similar": []
+          }
+        },
+        "pseudoCourse": false
+      },
+      "classSlotNames": ["C1", "L3"],
+      "examSlotName": "E3",
+      "seatForDept": 60,
+      "currentAllotmentForDept": 45,
+      "seatForOthers": 20,
+      "currentAllotmentForOthers": 5,
+      "offeringDeptShortCode": "CSE",
+      "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Vasanth", "uuid": "uuid-inst-003" },
+      "otherInstructorIDs": [],
+      "allocationScheme": {
+        "id": { "type": "allocscheme", "uuid": "uuid-scheme-001" },
+        "code": "DEFAULT",
+        "label": "Default Allocation",
+        "description": "Standard allocation scheme"
+      },
+      "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-003" },
+      "offeringStatus": "OFFERED"
+    },
+    {
+      "courseID": { "type": "course", "uuid": "uuid-course-ML" },
+      "courseView": {
+        "id": { "type": "courseview", "uuid": "uuid-course-ML" },
+        "info": {
+          "courseCode": { "code": "CS401" },
+          "title": "Machine Learning",
+          "ownerDeptShortCodes": ["CSE"],
+          "courseType": "Elective",
+          "lhoursPerWeek": 3,
+          "thoursPerWeek": 0,
+          "phoursPerWeek": 2,
+          "credits": 4,
+          "overview": "Intro to supervised and unsupervised learning.",
+          "requisite": {
+            "preReq": [],
+            "coReq": [],
+            "similar": []
+          }
+        },
+        "pseudoCourse": false
+      },
+      "classSlotNames": ["D1", "L4"],
+      "examSlotName": "E4",
+      "seatForDept": 40,
+      "currentAllotmentForDept": 30,
+      "seatForOthers": 10,
+      "currentAllotmentForOthers": 5,
+      "offeringDeptShortCode": "CSE",
+      "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Varma", "uuid": "uuid-inst-004" },
+      "otherInstructorIDs": [],
+      "allocationScheme": {
+        "id": { "type": "allocscheme", "uuid": "uuid-scheme-002" },
+        "code": "ML-ALLOC",
+        "label": "ML Allocation",
+        "description": "Allocation scheme for ML course"
+      },
+      "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-004" },
+      "offeringStatus": "OFFERED"
+    },
+    {
+      "courseID": { "type": "course", "uuid": "uuid-course-OS" },
+      "courseView": {
+        "id": { "type": "courseview", "uuid": "uuid-course-OS" },
+        "info": {
+          "courseCode": { "code": "CS302" },
+          "title": "Operating Systems",
+          "ownerDeptShortCodes": ["CSE"],
+          "courseType": "Core",
+          "lhoursPerWeek": 3,
+          "thoursPerWeek": 1,
+          "phoursPerWeek": 2,
+          "credits": 4,
+          "overview": "Concepts of process management, memory, file systems.",
+          "requisite": {
+            "preReq": [],
+            "coReq": [],
+            "similar": []
+          }
+        },
+        "pseudoCourse": false
+      },
+      "classSlotNames": ["E1", "L5"],
+      "examSlotName": "E5",
+      "seatForDept": 55,
+      "currentAllotmentForDept": 50,
+      "seatForOthers": 15,
+      "currentAllotmentForOthers": 5,
+      "offeringDeptShortCode": "CSE",
+      "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Roy", "uuid": "uuid-inst-005" },
+      "otherInstructorIDs": [],
+      "allocationScheme": {
+        "id": { "type": "allocscheme", "uuid": "uuid-scheme-003" },
+        "code": "OS-ALLOC",
+        "label": "OS Allocation",
+        "description": "Allocation for OS"
+      },
+      "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-005" },
+      "offeringStatus": "OFFERED"
+    },
+    {
+      "courseID": { "type": "course", "uuid": "uuid-course-CN" },
+      "courseView": {
+        "id": { "type": "courseview", "uuid": "uuid-course-CN" },
+        "info": {
+          "courseCode": { "code": "CS304" },
+          "title": "Computer Networks",
+          "ownerDeptShortCodes": ["CSE"],
+          "courseType": "Core",
+          "lhoursPerWeek": 3,
+          "thoursPerWeek": 1,
+          "phoursPerWeek": 2,
+          "credits": 4,
+          "overview": "Layered network architecture and protocols.",
+          "requisite": {
+            "preReq": [],
+            "coReq": [],
+            "similar": []
+          }
+        },
+        "pseudoCourse": false
+      },
+      "classSlotNames": ["F1", "L6"],
+      "examSlotName": "E6",
+      "seatForDept": 60,
+      "currentAllotmentForDept": 55,
+      "seatForOthers": 20,
+      "currentAllotmentForOthers": 5,
+      "offeringDeptShortCode": "CSE",
+      "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Kumar", "uuid": "uuid-inst-006" },
+      "otherInstructorIDs": [],
+      "allocationScheme": {
+        "id": { "type": "allocscheme", "uuid": "uuid-scheme-004" },
+        "code": "CN-ALLOC",
+        "label": "Network Allocation",
+        "description": "Allocation for CN"
+      },
+      "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-006" },
+      "offeringStatus": "OFFERED"
+    },
+
+    {
+      "courseID": { "type": "course", "uuid": "uuid-course-AI" },
+      "courseView": {
+        "id": { "type": "courseview", "uuid": "uuid-course-AI" },
+        "info": {
+          "courseCode": { "code": "CS402" },
+          "title": "Artificial Intelligence",
+          "ownerDeptShortCodes": ["CSE"],
+          "courseType": "Elective",
+          "lhoursPerWeek": 3,
+          "thoursPerWeek": 0,
+          "phoursPerWeek": 2,
+          "credits": 4,
+          "overview": "Covers basic AI algorithms and applications.",
+          "requisite": {
+            "preReq": [],
+            "coReq": [],
+            "similar": []
+          }
+        },
+        "pseudoCourse": false
+      },
+      "classSlotNames": ["G1", "L7"],
+      "examSlotName": "E7",
+      "seatForDept": 30,
+      "currentAllotmentForDept": 0,
+      "seatForOthers": 10,
+      "currentAllotmentForOthers": 0,
+      "offeringDeptShortCode": "CSE",
+      "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Srinivas", "uuid": "uuid-inst-007" },
+      "otherInstructorIDs": [],
+      "allocationScheme": {
+        "id": { "type": "allocscheme", "uuid": "uuid-scheme-005" },
+        "code": "AI-ALLOC",
+        "label": "AI Allocation",
+        "description": "AI course scheme"
+      },
+      "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-007" },
+      "offeringStatus": "OFFERED"
+    },
+    {
+      "courseID": { "type": "course", "uuid": "uuid-course-TOC" },
+      "courseView": {
+        "id": { "type": "courseview", "uuid": "uuid-course-TOC" },
+        "info": {
+          "courseCode": { "code": "CS305" },
+          "title": "Theory of Computation",
+          "ownerDeptShortCodes": ["CSE"],
+          "courseType": "Elective",
+          "lhoursPerWeek": 3,
+          "thoursPerWeek": 1,
+          "phoursPerWeek": 0,
+          "credits": 4,
+          "overview": "Study of automata, grammars, and computability.",
+          "requisite": {
+            "preReq": [],
+            "coReq": [],
+            "similar": []
+          }
+        },
+        "pseudoCourse": false
+      },
+      "classSlotNames": ["H1", "L8"],
+      "examSlotName": "E8",
+      "seatForDept": 50,
+      "currentAllotmentForDept": 0,
+      "seatForOthers": 20,
+      "currentAllotmentForOthers": 0,
+      "offeringDeptShortCode": "CSE",
+      "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Daleesha", "uuid": "uuid-inst-008" },
+      "otherInstructorIDs": [],
+      "allocationScheme": {
+        "id": { "type": "allocscheme", "uuid": "uuid-scheme-006" },
+        "code": "TOC-ALLOC",
+        "label": "TOC Allocation",
+        "description": "TOC scheme"
+      },
+      "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-008" },
+      "offeringStatus": "OFFERED"
+    },
+    {
+  "courseID": { "type": "course", "uuid": "uuid-course-HUM" },
+  "courseView": {
+    "id": { "type": "courseview", "uuid": "uuid-course-HUM" },
+    "info": {
+      "courseCode": { "code": "HS201" },
+      "title": "Introduction to Philosophy",
+      "ownerDeptShortCodes": ["HSS"],
+      "courseType": "SME",
+      "lhoursPerWeek": 3,
+      "thoursPerWeek": 0,
+      "phoursPerWeek": 0,
+      "credits": 3,
+      "overview": "A survey of major philosophical ideas and thinkers across history, introducing students to critical thinking and ethical reasoning.",
+      "requisite": {
+        "preReq": [],
+        "coReq": [],
+        "similar": []
+      }
+    },
+    "pseudoCourse": false
+  },
+  "classSlotNames": ["A1"],
+  "examSlotName": "E2",
+  "seatForDept": 30,
+  "currentAllotmentForDept": 25,
+  "seatForOthers": 20,
+  "currentAllotmentForOthers": 10,
+  "offeringDeptShortCode": "HSS",
+  "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Kavya", "uuid": "uuid-inst-015" },
+  "otherInstructorIDs": [],
+  "allocationScheme": {
+    "id": { "type": "allocscheme", "uuid": "uuid-scheme-007" },
+    "code": "PHIL-ALLOC",
+    "label": "Philosophy Allocation",
+    "description": "Allocation scheme for philosophy course"
+  },
+  "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-015" },
+  "offeringStatus": "OFFERED"
+},
+
+{
+  "courseID": { "type": "course", "uuid": "uuid-course-SCI" },
+  "courseView": {
+    "id": { "type": "courseview", "uuid": "uuid-course-SCI" },
+    "info": {
+      "courseCode": { "code": "SC101" },
+      "title": "Environmental Science",
+      "ownerDeptShortCodes": ["SCI"],
+      "courseType": "SME",
+      "lhoursPerWeek": 3,
+      "thoursPerWeek": 0,
+      "phoursPerWeek": 2,
+      "credits": 4,
+      "overview": "Explores ecological systems, biodiversity, and sustainability with a focus on environmental challenges and solutions.",
+      "requisite": {
+        "preReq": [],
+        "coReq": [],
+        "similar": []
+      }
+    },
+    "pseudoCourse": false
+  },
+  "classSlotNames": ["C1", "L2"],
+  "examSlotName": "E1",
+  "seatForDept": 35,
+  "currentAllotmentForDept": 30,
+  "seatForOthers": 15,
+  "currentAllotmentForOthers": 10,
+  "offeringDeptShortCode": "SCI",
+  "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Thilagan", "uuid": "uuid-inst-021" },
+  "otherInstructorIDs": [],
+  "allocationScheme": {
+    "id": { "type": "allocscheme", "uuid": "uuid-scheme-010" },
+    "code": "ENV-ALLOC",
+    "label": "Environmental Science Allocation",
+    "description": "Allocation policy for Environmental Science"
+  },
+  "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-021" },
+  "offeringStatus": "OFFERED"
+},
+
+{
+  "courseID": { "type": "course", "uuid": "uuid-course-MATH" },
+  "courseView": {
+    "id": { "type": "courseview", "uuid": "uuid-course-MATH" },
+    "info": {
+      "courseCode": { "code": "MA202" },
+      "title": "Linear Algebra",
+      "ownerDeptShortCodes": ["MAT"],
+      "courseType": "SME",
+      "lhoursPerWeek": 3,
+      "thoursPerWeek": 1,
+      "phoursPerWeek": 0,
+      "credits": 4,
+      "overview": "Covers vector spaces, matrices, eigenvalues, and their applications in engineering and science.",
+      "requisite": {
+        "preReq": [],
+        "coReq": [],
+        "similar": []
+      }
+    },
+    "pseudoCourse": false
+  },
+  "classSlotNames": ["B2", "T3"],
+  "examSlotName": "E3",
+  "seatForDept": 40,
+  "currentAllotmentForDept": 38,
+  "seatForOthers": 10,
+  "currentAllotmentForOthers": 9,
+  "offeringDeptShortCode": "MAT",
+  "primaryInstructorID": { "type": "instructor", "name":"Prof.Dr.Ramesh", "uuid": "uuid-inst-030" },
+  "otherInstructorIDs": [],
+  "allocationScheme": {
+    "id": { "type": "allocscheme", "uuid": "uuid-scheme-014" },
+    "code": "MATH-ALLOC",
+    "label": "Math Allocation",
+    "description": "Standard allocation for core mathematics courses"
+  },
+  "feedbackformID": { "type": "feedback", "uuid": "uuid-fb-030" },
+  "offeringStatus": "OFFERED"
+}
+]
+}

@@ -1,0 +1,101 @@
+<div class="container-fluid">
+    <div>
+        <input type="text" class="form-control form-control-sm mb-2 shadow-sm"
+            placeholder="Search by name or roll number..." [(ngModel)]="searchTerm">
+        <ul *ngIf="filteredStudents.length" class="list-group position-absolute w-100 z-3"
+            style="max-height: 200px; overflow-y: auto;">
+            <li class="list-group-item list-group-item-action" *ngFor="let s of filteredStudents"
+                (click)="selectSearchedStudent(s)">
+                {{ s.name }}
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="student; else noSelection" class="card p-4">
+
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Name :</strong> {{ student.name }}</p>
+                <p><strong>Program :</strong> {{ student.latestCurriculumID.type }}</p>
+                <p><strong>Completed Semesters :</strong> {{ student.studentSemTranscriptIDs.length }}</p>
+                <p><strong>Credit Plan Status :</strong>{{ planDetails?.status }}</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Roll Number :</strong> {{ student.latestRollNo }}</p>
+                <p><strong>Year of Joining :</strong>
+                    {{ student.pastCurriculumIDs.length && student.pastCurriculumIDs[student.pastCurriculumIDs.length - 1].uuid.split('-').pop() }}
+                </p>
+                <p><strong>CGPA :</strong> {{ student.cgpa || 'Not Available' }}</p>
+                <p>
+                    <strong>Reason for Plan AT-RISK :</strong><span class="text-danger">{{ student.reason }}</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center table-sm" *ngIf="planDetails">
+                <thead>
+                    <tr>
+                        <th>Submitted date</th>
+                        <th>Total Credits</th>
+                        <th>Plan Type</th>
+                        <th>Credit Plan Status</th>
+                        <th>FA remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ formattedSubmitDate }}</td>
+                        <td>{{ getTotalCredits() }}</td>
+                        <td>{{ planDetails.safePlan ? 'SAFE' : 'AT-RISK' }}</td>
+                        <td>{{ planDetails.status }}</td>
+                        <td>{{ planDetails.remark.what}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered text-center" *ngIf="planDetails && offeredCourses.length">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Course</th>
+                        <th>Primary Instructor</th>
+                        <th>Slot</th>
+                        <th>Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let group of groupCoursesByType()">
+                      <ng-container *ngFor="let course of group.courses; let i = index">
+                        <tr>
+                          <td *ngIf="i == 0" [attr.rowspan]="group.courses.length" class="align-middle ">{{ group.label }}</td>
+                          <td>{{ course.courseView.info.courseCode.code}}</td>
+                          <td>{{ course.primaryInstructorID.name || 'N/A' }}</td>
+                          <td>{{ course.classSlotNames.join(', ') || 'N/A' }}</td>
+                          <td *ngIf="i == 0" [attr.rowspan]="group.courses.length" class="align-middle ">{{ group.totalCredits }}</td>
+                        </tr>
+                      </ng-container>
+                    </ng-container>
+                </tbody>                 
+            </table>
+        </div>
+
+        <input *ngIf="planDetails?.status !== 'ACCEPTED' && planDetails?.status !== 'REJECTED'" type="text"
+            class="form-control form-control-sm mb-2 shadow-sm" placeholder="Enter remarks here..."
+            [(ngModel)]="remarks">
+
+        <div *ngIf="warningMessage" class="alert alert-warning py-1 px-2 my-2">{{ warningMessage }}</div>
+
+        <div class="mt-3" *ngIf="planDetails?.status !== 'ACCEPTED' && planDetails?.status !== 'REJECTED'">
+            <button class="btn btn-success me-2" (click)="acceptStudent()">Accept</button>
+            <button class="btn btn-danger" (click)="rejectStudent()">Reject</button>
+        </div>
+
+    </div>
+
+    <ng-template #noSelection>
+        <div class="alert alert-info">Select a student to view their details.</div>
+    </ng-template>
+
+
+</div>
